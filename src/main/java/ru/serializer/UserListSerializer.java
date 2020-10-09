@@ -1,10 +1,10 @@
 package ru.serializer;
 
-import ru.model.UserList;
+import ru.model.UserCollection;
 
 import java.io.File;
 
 public interface UserListSerializer {
 
-    File serialize(UserList userList, String filename);
+    File serialize(UserCollection userCollection, String filename);
 }

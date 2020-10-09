@@ -1,8 +1,8 @@
 package ru.serializer;
 
-import ru.model.UserList;
+import ru.model.UserCollection;
 
 public interface UserListDeserializer {
 
-    UserList deserialize(String filename);
+    UserCollection deserialize(String filename);
 }

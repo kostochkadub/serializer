@@ -2,16 +2,17 @@ package ru.serializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import ru.model.UserCollection;
 
 import java.io.File;
 import java.io.IOException;
 
-public class JsonDeserializer implements UserListDeserializer {
+public class XmlDeserializer {
 
     public UserCollection deserialize(String filename) {
 
-        ObjectMapper objectMapper = new ObjectMapper();
+        XmlMapper objectMapper = new XmlMapper();
         ObjectReader objectReader = objectMapper.readerFor(UserCollection.class);
         UserCollection o = null;
         try {
@@ -22,4 +23,5 @@ public class JsonDeserializer implements UserListDeserializer {
 
         return o;
     }
+
 }
